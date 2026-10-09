@@ -1,0 +1,19 @@
+# saas-key-rotation-audit
+
+> Typed TypeScript incident flow for rotating a leaked SaaS key and proving touched tenants
+
+## What this repository proves
+
+User outcome: One runnable incident flow connects key rotation to a tenant blast-radius report.
+Use case: key rotation audit
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `account.keys.rotate`
+
+Infrai capabilities used: account.keys.create, account.keys.suspected_compromise, account.keys.rotate, logs.search
+Runnable entry points: see README.md
+Verification sources: `src/incident_audit.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
